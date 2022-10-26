@@ -42,7 +42,7 @@ public class Humain {
 			perdreArgent(prix);
 		}
 		else {
-			parler("J'ai que " + argent + "je ne peux pas m'acheter " + bien + " à " + prix);
+			parler("J'ai que " + argent + "je ne peux pas m'acheter " + bien + " à " + prix +"e");
 		}
 	}
 	

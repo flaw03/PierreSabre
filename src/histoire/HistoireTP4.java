@@ -18,8 +18,7 @@ public class HistoireTP4 {
 		Yakuza adrian = new Yakuza("Adrian",30,"whisky","Warsong");
 		adrian.extorquer(lopez);
 		
-		
-		
-			
+		Ronin roro = new Ronin("Roro", 60, "shochu");
+		roro.donner(lopez);
 	}
 }

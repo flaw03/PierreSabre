@@ -12,7 +12,6 @@ public class Commercant extends Humain {
 	}
 	
 	public void recevoir(int argent) {
-		
 		super.gagnerArgent(argent);
 		super.parler(argent + "e ! Je te remercie genereux donateur ");
 		
