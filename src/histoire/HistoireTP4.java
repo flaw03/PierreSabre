@@ -9,11 +9,14 @@ public class HistoireTP4 {
 		yoann.acheter(" un pc gaming", 3);
 		yoann.acheter("un coca cola cherry", 10 );
 		
-		Commercant adrian = new Commercant("Adrien", 20);
-		adrian.direBonjour();
-		adrian.seFaireExtorquer();
-		adrian.recevoir(15);
-		adrian.boire("thé");
+		Commercant lopez = new Commercant("Lopez", 20);
+		lopez.direBonjour();
+		lopez.seFaireExtorquer();
+		lopez.recevoir(15);
+		lopez.boire("thé");
+		
+		Yakuza adrian = new Yakuza("Adrian",30,"whisky","Warsong");
+		adrian.extorquer(lopez);
 		
 		
 		
