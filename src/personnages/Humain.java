@@ -4,7 +4,7 @@ public class Humain {
 	private String nom;
 	private int argent;
 	private String boisson;
-	private int taille = 3;
+	private int taille = 4;
 	protected Humain[] memoire = new Humain[taille];
 	protected int nbConnaissance = 0 ;
 

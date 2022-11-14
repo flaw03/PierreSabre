@@ -18,15 +18,21 @@ public class HistoireTP5 {
 		System.out.println(" \n Le marchand Marco rencontre le yakuza.");
 		marco.faireConnaissanceAvec(yaku);
 		
-		System.out.println("\n Le marchand Marco rencontre un autre marchand.");
+		System.out.println("\nLe marchand Marco rencontre un autre marchand.");
 		marco.faireConnaissanceAvec(chonin);
 		
-		System.out.println("\n Le marchand Marco rencontre un autre marchand.");
+		System.out.println("\nLe marchand Marco rencontre un autre marchand.");
 		marco.faireConnaissanceAvec(kumi);
-		
+		System.out.println("\n");
 		marco.lister();
-		
+		System.out.println("\n");
 		yaku.lister();
+		System.out.println("\n");
+		Samourai akimoto = new Samourai("Miyamoto", "Akimoto", "saké", 80);
+		marco.faireConnaissanceAvec(akimoto);
+		System.out.println("\n");
+		akimoto.boire("thé");
+		marco.lister();
 		
 		
 

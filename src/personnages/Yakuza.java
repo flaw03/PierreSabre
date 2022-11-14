@@ -38,7 +38,7 @@ public class Yakuza extends Humain {
 	@Override
 	public void direBonjour() {
 		super.direBonjour();
-		parler("Mon clan est "+ clan +"aka le meilleur clan du Japon");
+		parler("Mon clan est "+ clan +" aka le meilleur clan du Japon");
 		
 	}
 }
