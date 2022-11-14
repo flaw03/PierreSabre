@@ -6,9 +6,11 @@ public class Commercant extends Humain {
 		super(nom, argent,"thé" );
 	}
 	
-	public void seFaireExtorquer() {
-		perdreArgent(argent);
+	public int seFaireExtorquer() {
+		int perte = getArgent();
+		perdreArgent(perte);
 		parler("Trop relou...... je me suis fait raquetter ");
+		return perte;
 	}
 	
 	public void recevoir(int argent) {

@@ -1,16 +1,20 @@
 package personnages;
 
 public class Humain {
-	protected String nom;
-	protected int argent;
-	protected String boisson;
-	
+	private String nom;
+	private int argent;
+	private String boisson;
+	private int taille = 3;
+	protected Humain[] memoire = new Humain[taille];
+	protected int nbConnaissance = 0 ;
+
 	
 	
 	public Humain(String nom, int argent, String boisson) {
 		this.nom = nom;
 		this.argent = argent;
 		this.boisson = boisson;
+	
 	}
 	
 
@@ -23,7 +27,7 @@ public class Humain {
 	}
 	
 	
-	public void parler(String texte) {
+	protected void parler(String texte) {
 		System.out.println( nom + " :" + texte);
 		
 	}
@@ -46,15 +50,54 @@ public class Humain {
 		}
 	}
 	
-	public void gagnerArgent(int gain) {
+	protected void gagnerArgent(int gain) {
 		argent += gain;
 	}
 	
-	public void perdreArgent(int perte) {
+	protected void perdreArgent(int perte) {
 		argent -= perte;
 	}
 	
 	
+	public void faireConnaissanceAvec(Humain humain) {
+		memoriser(humain);
+		humain.memoriser(this);
+		repondre(humain);
+			
+	}
+	
+	private void memoriser(Humain humain) {
+		if (nbConnaissance < taille){
+			memoire[nbConnaissance]=humain;
+			nbConnaissance++;
+		}
+		else {
+			int i = 0;
+			for (i=0; i < (taille - 1);i++){
+				memoire[i]=memoire[i+1];
+			}
+			memoire[(taille - 1)]=humain;
+			}
+			
+		}
+	
+	private void repondre(Humain humain) {
+		direBonjour();
+		humain.direBonjour();
+	}
+	
+	public void lister() {
+		if (nbConnaissance == 0) {
+			parler("je ne connais personne snifff");
+		}
+		else {
+			String mesPote = "" ;
+			for (int i = 0; i<nbConnaissance;i++) {
+				mesPote += memoire[i].getNom() + "," ;
+			}
+			parler("Mes copains sont "+mesPote.substring(0,mesPote.length()-1) + ".");
+		}
+	}
 	
 	
 }

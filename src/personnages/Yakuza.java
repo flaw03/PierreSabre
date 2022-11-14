@@ -17,27 +17,21 @@ public class Yakuza extends Humain {
 	public void extorquer(Commercant victime) {
 		parler("Tiens, tiens, ne serait-ce pas un faible marchand qui passe par là ?");
 		parler( victime.getNom() + "Donne moi ta moula si tu veux pas mourir .");
-		int argentVole= victime.getArgent();
+		int argentVole= victime.seFaireExtorquer();
 		gagnerArgent(argentVole);
-		victime.seFaireExtorquer();
-		parler("La pêche était bonne je me suis fait " + argentVole +"gratuit ça me fait " + argent +"." );
+		parler("La pêche était bonne je me suis fait " + argentVole +"gratuit ça me fait " + getArgent() +"." );
 		reputation ++;
 	}
 	
 	public void perdre() {
-		parler("J’ai perdu mon duel et mes "+ argent + "e, snif... J'ai déshonoré le clan de "+ clan +".");
-		perdreArgent(argent);
-		reputation -=1;
+		parler("J’ai perdu mon duel et mes "+ getArgent() + "e, snif... J'ai déshonoré le clan de "+ clan +".");
+		perdreArgent(getArgent());
+		reputation-- ;
 	}
 	
 	public void gagner(int gain) {
-		argent += gain ;
+		gagner(gain);
 		reputation ++ ;
 		parler("J'ai la vaincu la vermine de ronine , il vraiment crue vaincre un membre "+ clan +" ?\nJe l'ai depouiller des ses "+ gain+"e.");
 	}
-
-
-
-
-
 }
