@@ -34,4 +34,11 @@ public class Yakuza extends Humain {
 		reputation ++ ;
 		parler("J'ai la vaincu la vermine de ronine , il vraiment crue vaincre un membre "+ clan +" ?\nJe l'ai depouiller des ses "+ gain+"e.");
 	}
+	
+	@Override
+	public void direBonjour() {
+		super.direBonjour();
+		parler("Mon clan est "+ clan +"aka le meilleur clan du Japon");
+		
+	}
 }
