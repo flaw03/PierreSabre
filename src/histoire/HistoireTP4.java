@@ -22,7 +22,5 @@ public class HistoireTP4 {
 		roro.donner(lopez);
 		
 		roro.provoquer(adrian);
-		
-		
 	}
 }
